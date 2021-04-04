@@ -2,8 +2,8 @@
 {
     public enum EnumOptions
     {
-        Insert, 
-        GetAll, 
+        Insert,
+        GetAll,
         Delete,
         Update
     }

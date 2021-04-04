@@ -1,5 +1,6 @@
 ﻿using School.Contracts;
 using School.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,6 +23,12 @@ namespace School.Services
 
         #endregion
 
+        #region Propriedade privada
+
+        private int auxId = 0;
+
+        #endregion
+
         #region Public Metods
         public List<User> GetAll()
         {
@@ -36,6 +43,7 @@ namespace School.Services
 
         public void InsertUser(User User)
         {
+            User.IdUser = auxId++;
             this.UserList.Add(User);
         }
 
@@ -67,5 +75,8 @@ namespace School.Services
             return null;
         }
         #endregion
+
+
+        
     }
 }
